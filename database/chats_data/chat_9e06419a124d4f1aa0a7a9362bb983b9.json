@@ -1,0 +1,29 @@
+{
+  "session_id": "9e06419a-124d-4f1a-a0a7-a9362bb983b9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello Shreshth, how can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "Tum batao tum mere liye kya kar sakte ho"
+    },
+    {
+      "role": "assistant",
+      "content": "Shreshth, main aapke liye kai tarah se madad kar sakta hoon, jaise ki jaankari pradaan karna, apps ya websites kholna, tasveerein generate karna, music bajana, content likhna, aur bahut kuchh."
+    },
+    {
+      "role": "user",
+      "content": "aur batao"
+    },
+    {
+      "role": "assistant",
+      "content": "Shreshth, main aapke liye sawal ka jawab de sakta hoon, naye vichar generate kar sakta hoon, aapke projects par sahayta kar sakta hoon, jaise ki J.A.R.V.I.S par kaam karna, aur aapke technical questions ka jawab de sakta hoon."
+    }
+  ]
+}
