@@ -1,1 +1,46 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Local tooling / editor
+.vscode/
+.idea/
+
+# Secrets / local config
 .env
+.env.*
+!.env.example
+
+# Python cache/build artifacts
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+
+# Runtime temp/work folders
+.tmp/
+.virtualenv-appdata/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated data (keep learning_data text files tracked)
+database/chats_data/*
+database/vector_store/*
+database/camera_captures/*
+!database/chats_data/.gitkeep
+!database/vector_store/.gitkeep

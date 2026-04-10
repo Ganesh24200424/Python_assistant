@@ -228,7 +228,10 @@ Run `edge-tts --list-voices` to see all available TTS voices.
 
 **J.A.R.V.I.S** was built by **Shreshth Kaushik** — educator, entrepreneur, and programmer.
 
-
-
+- Website: [theshreshthkaushik.com](https://www.theshreshthkaushik.com/)
+- Instagram: [@theshreshthkaushik](https://www.instagram.com/theshreshthkaushik/)
+- Telegram: [t.me/theshreshthkaushik](https://t.me/theshreshthkaushik)
+- YouTube: [Shreshth Kaushik](https://www.youtube.com/channel/UC7A5u12yVIZaCO_uXnNhc5g)
+- Jarvis for Everyone: [jarvis4everyone.com](https://jarvis4everyone.com)
 
 `python run.py` → http://localhost:8000
