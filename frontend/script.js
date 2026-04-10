@@ -1,4 +1,3 @@
-
 const API = (typeof window !== 'undefined' && window.location.origin)
     ? window.location.origin
     : 'http://localhost:8000';
