@@ -1,28 +1,13 @@
-const { app, BrowserWindow, shell } = require('electron');
+console.log('Global keys:', Object.keys(global).filter(k => k.length < 5));
+console.log('app in global?:', 'app' in global);
+console.log('BrowserWindow in global?:', 'BrowserWindow' in global);
+
 const path = require('path');
-const http = require('http');
+const { app, BrowserWindow, shell } = global;
 
 let mainWindow;
-let pythonServer;
 
 const isDev = process.env.NODE_ENV === 'development';
-
-function startPythonServer() {
-  return new Promise((resolve, reject) => {
-    const server = http.createServer((req, res) => {
-      res.writeHead(200, { 'Content-Type': 'text/plain' });
-      res.end('Python server check');
-    });
-    server.listen(8000, '127.0.0.1', () => {
-      console.log('Checking backend...');
-      resolve(server);
-    });
-    server.on('error', () => {
-      console.log('Backend may already be running');
-      resolve(server);
-    });
-  });
-}
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -57,19 +42,10 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
-
-  if (!isDev) {
-    mainWindow.setMenuBarVisibility(false);
-  }
 }
 
-app.whenReady().then(async () => {
+app.whenReady().then(() => {
   console.log('Starting Jarvis Desktop...');
-  
-  if (!isDev) {
-    pythonServer = await startPythonServer();
-  }
-  
   createWindow();
 
   app.on('activate', () => {
@@ -80,16 +56,7 @@ app.whenReady().then(async () => {
 });
 
 app.on('window-all-closed', () => {
-  if (pythonServer) {
-    pythonServer.close();
-  }
   if (process.platform !== 'darwin') {
     app.quit();
-  }
-});
-
-app.on('before-quit', () => {
-  if (pythonServer) {
-    pythonServer.close();
   }
 });

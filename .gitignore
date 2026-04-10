@@ -38,6 +38,10 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Desktop app
+desktop/node_modules/
+desktop/dist/
+
 # Generated data (keep learning_data text files tracked)
 database/chats_data/*
 database/vector_store/*
